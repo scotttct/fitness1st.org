@@ -1,0 +1,3 @@
+﻿//This Project has been updated on 12/3/2019 to have admin roles only see certain menu items that users cannot see when they register:
+//admin role can see compendium and Administration menu items
+//right now you can create, view and edit roles, see users in roles, but they will not delete...Add function next.
