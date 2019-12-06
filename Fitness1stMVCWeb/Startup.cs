@@ -37,16 +37,14 @@ namespace Fitness1stMVCWeb
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-//object p = 
-            services.AddAuthentication()
-                                .AddGoogle(options =>
-                                {
-                                    options.ClientId = "323320703423-0n2kmrdof814fbur7md6m51msc1fpqm4.apps.googleusercontent.com";
-                                    options.ClientSecret = "QriBtY1HRPqhtaeMsOo7r4tL";
-
-                                }
-
-                                );
+            //object p = 
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            });
+           
+       
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("RequireAdminRole",

@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@*This is the Page Heading and SubHeadings*@
     <div class="text-center ">
         <div class="container bg-dark text-light text-center rounded shadow-lg p-3 border-secondary font-weight-bold">
-            <h1 class="display-4">Welcome to Fitness1st</h1>
+            <h1 class="display-2 ">Welcome to Fitness1st</h1>
         </div>
         <div class="container">
             <div class="bg-success text-light p-2 rounded shadow table-responsive-md ">
@@ -14,12 +14,13 @@
                 <br />
 
             </div>
+            @*Beginning of Informational Section Bottom*@
             <div class="container">
                 @*Main Info Row*@
                 <div class="row p-2 rounded shadow-lg">
                     <div class="col-sm rounded shadow bg-secondary p-2">
                         <div class="card rounded shadow border-success width: 18rem">
-                            <img class="card-img-top bg-light" src="../images/PELogPic2.jpg" alt="Card image cap">
+                            <img class="card-img-top bg-light img-thumbnail" src="../images/PELogPic2.jpg" alt="Card image cap">
                             <div class="card-title bg-success p-0 shadow-sm rounded-sm">
                                 <h2> Journal Activity</h2>
                             </div>
@@ -30,95 +31,100 @@
                             </div>
                             <div class="card-text rounded-sm shadow-sm">
                                 <div class="list-group bg-secondary">
-                                    <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Login</a>
-                                    <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Ask to be Registered</a>
-                                    <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Journaling FAQs</a>
-                                    <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Learning About Your Data</a>
+                                    <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                                    <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Meal Log</a>
+                                    <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Journaling FAQs</a>
+                                    <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Learning About Your Data</a>
                                 </div>
                                 @*<div class="list-group bg-success">
-                                    <button type="button" class="list-group-item list-group-item-action bg-secondary text-light">
-                                        Cras justo odio
-                                    </button>
-                                    <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
-                                    <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-                                    <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
-                                    <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
-                                </div>*@
+                        <button type="button" class="list-group-item list-group-item-action bg-secondary text-light">
+                            Cras justo odio
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                        <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+                        <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+                        <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+                    </div>*@
                             </div>
                             @*<div class="card-footer">
-                                <a href="#" class="btn btn-success box-shadow">Log Activity</a>
-                            </div>*@
+                    <a  class="btn btn-success box-shadow">Log Activity</a>
+                </div>*@
                         </div>
                     </div>
+                    @*______________________________________________________________________*@
+
                     @*Health Information*@
                     <div class="col-sm">
                         <div class="col-sm rounded shadow bg-secondary p-2">
                             <div class="card rounded shadow border-success width: 18rem">
-                                <img class="card-img-top bg-light" src="../images/" alt="Card image cap">
+                                <img class="card-img-top bg-light img-thumbnail" src="../images/Heart.png" alt="Card image cap">
                                 <div class="card-title bg-success p-0 shadow-sm rounded-sm">
-                                    <h2> Journal Activity</h2>
+                                    <h2>Physical Activity and your Health</h2>
                                 </div>
                                 <div class="card-header bg-dark text-light p-0 rounded-sm shadow-sm">
                                     <h3>
-                                        Physical Activity Journals for School!
+                                        What impact does exercise have on health
                                     </h3>
                                 </div>
                                 <div class="card-text rounded-sm shadow-sm">
                                     <div class="list-group bg-secondary">
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Login</a>
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Ask to be Registered</a>
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Journaling FAQs</a>
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Learning About Your Data</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light">Physical Effects</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Mental Health</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Spiritual Well Being</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Weight Management</a>
                                     </div>
+
                                     @*<div class="list-group bg-success">
-                                        <button type="button" class="list-group-item list-group-item-action bg-secondary text-light">
-                                            Cras justo odio
-                                        </button>
-                                        <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
-                                        <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-                                        <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
-                                        <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
-                                    </div>*@
+                            <button type="button" class="list-group-item list-group-item-action bg-secondary text-light">
+                                Cras justo odio
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                            <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+                            <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+                            <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+                        </div>*@
                                 </div>
                                 @*<div class="card-footer">
-                                    <a href="#" class="btn btn-success box-shadow">Log Activity</a>
-                                </div>*@
+                        <a href="#" class="btn btn-success box-shadow">Log Activity</a>
+                    </div>*@
                             </div>
                         </div>
                     </div>
+                    @*______________________________________________________________________*@
+
                     @*Fitness Planning*@
                     <div class="col-sm">
                         <div class="col-sm rounded shadow bg-secondary p-2">
                             <div class="card rounded shadow border-success width: 18rem">
-                                <img class="card-img-top bg-light" src="../images/PELogPic2.jpg" alt="Card image cap">
+                                <img class="card-img-top bg-light img-thumbnail" src="../images/Planner.jpeg" alt="Card image cap">
                                 <div class="card-title bg-success p-0 shadow-sm rounded-sm">
-                                    <h2> Journal Activity</h2>
+                                    <h2> Planning</h2>
                                 </div>
                                 <div class="card-header bg-dark text-light p-0 rounded-sm shadow-sm">
                                     <h3>
-                                        Physical Activity Journals for School!
+                                        "Proper Planning Prevents Poor Performance" <span class="font-italic"></span>
                                     </h3>
                                 </div>
                                 <div class="card-text rounded-sm shadow-sm">
                                     <div class="list-group bg-secondary">
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Login</a>
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Ask to be Registered</a>
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Journaling FAQs</a>
-                                        <a href="#" class="list-group-item list-group-item-action btn btn-success bg-success text-light">Learning About Your Data</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Your Plan</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Fitness Assessment</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Activity Planning</a>
+                                        <a class="list-group-item list-group-item-action btn btn-success bg-success text-light" asp-area="" asp-controller="Information" asp-action="Index">Meal Planning</a>
                                     </div>
                                     @*<div class="list-group bg-success">
-                                        <button type="button" class="list-group-item list-group-item-action bg-secondary text-light">
-                                            Cras justo odio
-                                        </button>
-                                        <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
-                                        <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-                                        <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
-                                        <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
-                                    </div>*@
+                            <button type="button" class="list-group-item list-group-item-action bg-secondary text-light">
+                                Cras justo odio
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                            <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+                            <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+                            <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+                        </div>*@
                                 </div>
                                 @*<div class="card-footer">
-                                    <a href="#" class="btn btn-success box-shadow">Log Activity</a>
-                                </div>*@
+                        <a href="#" class="btn btn-success box-shadow">Log Activity</a>
+                    </div>*@
                             </div>
                         </div>
                     </div>
